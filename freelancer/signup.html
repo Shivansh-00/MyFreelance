@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="signup.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7eb3, #8e44ad);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .signup-container {
+            text-align: center;
+            max-width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .input-field:focus {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .gender-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .gender-container label {
+            color: white;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            background: linear-gradient(45deg, #ff4757, #ff6b6b);
+            color: white;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .signup-btn:hover {
+            background: linear-gradient(45deg, #e63946, #d63031);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <input type="text" id="fullname" class="input-field" placeholder="Full Name">
+        <input type="email" id="email" class="input-field" placeholder="Email">
+        <input type="password" id="password" class="input-field" placeholder="Password">
+        <input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password">
+        
+        <div class="gender-container">
+            <label><input type="radio" name="gender" value="male">FreeLancer</label>
+            <label><input type="radio" name="gender" value="female">Client</label>
+        </div>
+        
+        <button class="signup-btn" onclick="registerUser()">Sign Up</button>
+    </div>
+</body>
+</html>

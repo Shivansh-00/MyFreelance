@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- 🔥 Login Button -->
+    <button class="login-btn">Login</button>
+
+    <!-- 🔥 Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sign in with</h2>
+            <div class="social-login">
+                <button class="google-btn"><i class="fab fa-google"></i> Google</button>
+                <button class="facebook-btn"><i class="fab fa-facebook"></i> Facebook</button>
+                <button class="twitter-btn"><i class="fab fa-twitter"></i> Twitter</button>
+                <button class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

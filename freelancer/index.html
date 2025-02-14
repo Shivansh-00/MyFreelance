@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- 🔥 Header Section -->
+    <header>
+        <div class="logo">
+            <a href="#">Freelance Market</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="nav-item">Find Work</a>
+                    <div class="dropdown-content">
+                        <p><a href="find-work.html">Ways to Earn</a></p>
+                        <p><a href="find-work.html">Find Work for Your Skills</a></p>
+                        <p><a href="find-work.html">Win Work with Ads</a></p>
+                        <p><a href="find-work.html">Join Freelancer Plus</a></p>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-item">Find Talent</a>
+                    <div class="dropdown-content">
+                        <p><a href="find-talent.html">Post a Job & Hire a Pro</a></p>
+                        <p><a href="find-talent.html">Talent Marketplace</a></p>
+                        <p><a href="find-talent.html">Project Catalog</a></p>
+                        <p><a href="find-talent.html">Consultations</a></p>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-item">Why Freelance</a>
+                    <div class="dropdown-content">
+                        <p><a href="why-freelance.html">Success Stories</a></p>
+                        <p><a href="why-freelance.html">How to Hire</a></p>
+                        <p><a href="why-freelance.html">Reviews</a></p>
+                        <p><a href="why-freelance.html">How to Find Work</a></p>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="enterprise.html" class="nav-item">Enterprise</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 🔥 Header Buttons (Login, Signup & Dark Mode) -->
+        <div class="header-buttons">
+            <a href="login.html" class="btn login">Login</a>
+            <a href="signup.html" class="btn signup">Sign Up</a>
+            <button class="dark-mode-toggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- 🔥 Hero Section -->
+    <section class="hero">
+        <h1>Find the Best <span class="highlight">Freelancers</span> & Work Opportunities</h1>
+        <div class="hero-buttons">
+            <a href="find-work.html" class="btn primary">Find Work</a>
+            <a href="demo.html" class="btn secondary">Watch a Demo</a>
+        </div>
+    </section>
+
+    <!-- 🔥 Feature Tabs -->
+    <section class="feature-tabs">
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="openTab(event, 'payments')">Secure Payments</button>
+            <button class="tab-btn" onclick="openTab(event, 'opportunities')">Global Opportunities</button>
+            <button class="tab-btn" onclick="openTab(event, 'support')">24/7 Support</button>
+        </div>
+
+        <div class="tab-content" id="payments">
+            <h2>Secure Payments</h2>
+            <p>Get paid securely and on time for every project you complete.</p>
+            <a href="secure-payments.html" class="btn tab-link">Learn More</a>
+        </div>
+
+        <div class="tab-content hidden" id="opportunities">
+            <h2>Global Opportunities</h2>
+            <p>Connect with clients from around the world and grow your career.</p>
+            <a href="global-opportunities.html" class="btn tab-link">Learn More</a>
+        </div>
+
+        <div class="tab-content hidden" id="support">
+            <h2>24/7 Support</h2>
+            <p>Our support team is always available to help you whenever needed.</p>
+            <a href="support.html" class="btn tab-link">Learn More</a>
+        </div>
+    </section>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>&copy; 2025 Freelance Market. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

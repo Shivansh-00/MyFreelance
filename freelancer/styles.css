@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'); /* FontAwesome for Icons */
+
+/* 🔥 General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0; /* Smooth fade-in */
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+    background: #181818;
+    color: #f4f4f4;
+}
+
+.dark-mode header, 
+.dark-mode footer {
+    background: #111;
+}
+
+.dark-mode .nav-item {
+    color: #f4f4f4;
+}
+
+.dark-mode .dropdown-content {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .btn {
+    background: #ffcc00;
+    color: black;
+}
+
+.dark-mode .btn.secondary {
+    background: #444;
+}
+
+/* 🔥 Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 20px;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+}
+
+.logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🔥 Dark Mode Toggle */
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* 🔥 Navigation Links */
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect */
+.hover-effect .nav-item:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* 🔥 Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 🔥 Buttons */
+.btn {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #e6b800;
+}
+
+.btn.secondary {
+    background: #333;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #444;
+}
+
+/* 🔥 Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('freelance-bg.jpg') no-repeat center center/cover;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero .highlight {
+    color: #ffcc00;
+}
+
+/* 🔥 Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+#search {
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-btn {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    background: #e6b800;
+}
+
+/* 🔥 Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 50px;
+    transition: background 0.5s ease-in-out;
+}
+
+/* 🔥 Tab Content */
+.tab-content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 🔥 Tab Buttons */
+.tab-btn {
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: #ffcc00;
+    color: black;
+}
+
+/* 🔥 Login Modal */
+.login-modal {
+    width: 350px;
+    padding: 20px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 100;
+}
+
+.login-modal.active {
+    display: block;
+}
+
+/* 🔥 Social Login Buttons */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+.google {
+    background: #db4437;
+    color: white;
+}
+
+.facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.instagram {
+    background: #e4405f;
+    color: white;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* 🔥 Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
